@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-        static Map<Integer, List<Integer>> graph = new HashMap<>();
+    static Map<Integer, List<Integer>> graph = new HashMap<>();
     static int computer;
     static int N;
     static boolean[] visited;
