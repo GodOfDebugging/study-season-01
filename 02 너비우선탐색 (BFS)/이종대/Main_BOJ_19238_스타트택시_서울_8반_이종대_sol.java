@@ -15,6 +15,7 @@ public class Main_BOJ_19238_스타트택시_서울_8반_이종대_sol {
 	static final int[] dr = {-1,0,0,1};
 	static final int[] dc = {0,-1,1,0};
 	
+	// O(N^2 * M) ~= O(N^4)
 	static void init() throws IOException {
 		st = new StringTokenizer(br.readLine().trim(), " ");
 		N = Integer.parseInt(st.nextToken());
@@ -47,6 +48,8 @@ public class Main_BOJ_19238_스타트택시_서울_8반_이종대_sol {
 		}
 	}
 	
+	// 격자 그래프 => V = N^2, E = 4N^2 => O(V+E) = O(5N^2) = O(N^2)
+	// PriorirtyQueue => O(N^2 log N^2) = O(N^2 log N)
 	static int bfs(int r, int c, int[][] map) {
 		int cost = 0;
 		PriorityQueue<int[]> candiStart = new PriorityQueue<>(new Comparator<int[]>() {
@@ -92,13 +95,14 @@ public class Main_BOJ_19238_스타트택시_서울_8반_이종대_sol {
 			return cost;
 		}
 		
-		return 1_000_000_000;
+		return 532_000;
 	}
 	
 	static boolean inRange(int r, int c) {
 		return 0 <= r&&r < N && 0 <= c&&c < N;
 	}
 	
+	// O(M * N^2 log N)
 	static int compute() {
 		int ans = fuel;
 		for (int m = 1 ; m <= M ; m++) {
