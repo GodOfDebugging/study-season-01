@@ -23,7 +23,25 @@
 hs_err_pid*
 replay_pid*
 
-.DS_Store
-._.DS_Store
-**/.DS_Store
-**/._.DS_Store
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+
+# Build directories (Maven/Gradle common)
+/target/
+/build/
+/out/
+
+# Java class files and logs
+*.class
+*.log
+
+# OS-specific files
+**/*.DS_Store
+Thumbs.db
