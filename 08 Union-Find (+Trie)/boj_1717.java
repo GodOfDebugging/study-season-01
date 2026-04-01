@@ -14,6 +14,7 @@ class Main {
 			rank[a] = find(rank[a]);
 		return rank[a];
 	}
+	//O(M) 에다가 대충 아커만짤
 	static void union(int a, int b) {
 		int rankA = find(a);
 		int rankB = find(b);
