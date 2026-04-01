@@ -8,7 +8,7 @@ public class Main {
 	static Map<String, Integer> size ;
 	static StringBuilder sb;
 
-  // O(M) 에다가 대충 아커만짤.
+  // O(n) 에다가 대충 아커만짤.
 	static void union(String a, String b) {
 		String rankA = find(a);
 		String rankB = find(b);
